@@ -63,14 +63,14 @@ const Dapp = () => {
           ✌️
         </Text>
 
-        {tab == 1 ? (
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            minW={"70vw"}
-            p={8}
-          >
+        <Box
+          rounded={"lg"}
+          bg={useColorModeValue("white", "gray.700")}
+          boxShadow={"lg"}
+          minW={"70vw"}
+          p={8}
+        >
+          {tab == 1 && (
             <HStack spacing={10} textAlign="center">
               <Stack spacing={4} minW={"70vw"}>
                 <Heading as="h4" size="md">
@@ -122,19 +122,8 @@ const Dapp = () => {
                 </Button>
               </Stack>
             </HStack>
-          </Box>
-        ) : (
-          ""
-        )}
-
-        {tab == 2 ? (
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            minW={"70vw"}
-            p={8}
-          >
+          )}
+          {tab == 2 && (
             <HStack spacing={10} textAlign="center">
               <Stack spacing={4} minW={"70vw"}>
                 <Heading as="h4" size="md">
@@ -179,15 +168,13 @@ const Dapp = () => {
                 </Button>
               </Stack>
             </HStack>
-          </Box>
-        ) : (
-          ""
-        )}
+          )}
+        </Box>
 
         {isWalletConnected ? (
           <Box
             rounded={"md"}
-            bg={useColorModeValue("white", "gray.700")}
+            bg={"white"}
             boxShadow={"lg"}
             p={2}
             justify={"between"}
