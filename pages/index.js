@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Dapp from "./dapp";
+import Dapp from "./Dapp";
 
 export default function Home() {
   return (
